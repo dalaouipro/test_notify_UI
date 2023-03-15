@@ -1,0 +1,19 @@
+<h3>Update Notif</h3>
+<form (ngSubmit)="onSubmit()">
+	<div class="form-group">
+	  <label for="value">Value</label>
+	  <input type="number" class="form-control" name="value" [(ngModel)]="notif.value" placeholder="Enter value">
+	</div>
+	<div class="form-group">
+	  <label for="title">Title</label>
+	  <input type="text" class="form-control" name="title" [(ngModel)]="notif.title" placeholder="Enter title">
+	</div>
+	<div class="form-group">
+	  <label for="complete">Complete</label>
+	  <select class="form-control" name="complete" [(ngModel)]="notif.complete">
+		<option>True</option>
+		<option>False</option>
+	  </select>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
