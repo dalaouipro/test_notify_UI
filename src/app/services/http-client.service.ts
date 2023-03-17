@@ -19,10 +19,10 @@ export class HttpClientService {
     return this.http.get<Notif>(`${this.baseUrl}/findNotif/${id}`);
   }
   createNotif(notif:Notif): Observable<Object> { 
-    return this.http.put<Notif>(`${this.baseUrl}/createNotif`, notif);
+    return this.http.post<Notif>(`${this.baseUrl}/createNotif`, notif);
   }
   updateNotif(notif:Notif): Observable<Object> { 
-    return this.http.post<Notif>(`${this.baseUrl}/findNotif/${notif.id}`, notif);
+    return this.http.put<Notif>(`${this.baseUrl}/updateNotif/${notif.id}`, notif);
   }
   deleteNotif(id: number): Observable<Notif> { 
     return this.http.delete<Notif>(`${this.baseUrl}/deleteNotif/${id}`);

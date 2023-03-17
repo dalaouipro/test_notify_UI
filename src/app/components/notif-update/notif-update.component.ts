@@ -13,25 +13,16 @@ export class NotifUpdateComponent implements OnInit {
   id!:number;
 
   constructor(private service:HttpClientService, private router:Router, private route:ActivatedRoute) {}
-  ngOnInit(){
 
+  ngOnInit(){
     this.route.queryParams.subscribe({
       next : params => {this.id=params['id'];},
       error : err =>console.log(err)
     });
-
-    console.log(this.id);
-
     this.service.findNotif(this.id).subscribe({
-      next : data =>{
-        this.notif=data;
-        console.log(this.notif.title);
-      },
+      next : data =>{this.notif=data;},
       error : err =>console.log(err)
     });
-
-    console.log(this.notif.title);
-    
   }
 
   save() {

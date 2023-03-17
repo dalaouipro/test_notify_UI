@@ -11,8 +11,8 @@
 	<div class="form-group">
 	  <label for="complete">Complete</label>
 	  <select class="form-control" name="complete" [(ngModel)]="notif.complete">
-		<option>True</option>
-		<option>False</option>
+		<option [ngValue]="false">False</option>
+		<option [ngValue]="true">True</option>
 	  </select>
 	</div>
 	<button type="submit" class="btn btn-primary">Submit</button>
